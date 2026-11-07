@@ -14,6 +14,10 @@ Open `index.html` (or serve the folder with any static host). All CSS and JavaSc
 
 **Note:** Enquiry forms are demo-only and do not send or store submissions. Replace sample listings and stock photography with approved inventory and connect a secure enquiry service before commercial use.
 
+## Brand assets
+
+The Grand Axis Group logo is in `assets/`: `logo-full.png`, `logo-emblem.png` and `logo-wordmark.png` (full colour, for light backgrounds), each with a `-light` version (ivory and gold, for dark backgrounds), plus `favicon.png` and `apple-touch-icon.png`.
+
 ## Photo credits
 
 Stock photography from [Unsplash](https://unsplash.com) under the [Unsplash License](https://unsplash.com/license). Photos are used for illustration only and do not depict actual listings.
