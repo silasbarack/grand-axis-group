@@ -165,8 +165,6 @@ p{color:var(--muted)}
 .btn-muted{background:var(--cream);color:var(--navy-deep)}.btn-muted:hover{background:#efe9dd}
 
 /* Header */
-.demo-strip{background:#060f17;border-bottom:1px solid rgba(200,162,90,.16);color:#b6a47d}
-.demo-strip button{color:#b6a47d}
 .site-header{background:rgba(8,20,31,.86);backdrop-filter:saturate(150%) blur(16px);-webkit-backdrop-filter:saturate(150%) blur(16px);border-bottom:1px solid rgba(200,162,90,.14);box-shadow:none;transition:background .4s,box-shadow .4s}
 .site-header.scrolled{background:rgba(8,20,31,.97);box-shadow:0 14px 34px -16px rgba(0,0,0,.55)}
 .header-main{height:88px;transition:height .45s var(--ease)}
@@ -487,7 +485,6 @@ p{color:var(--muted)}
   <div id="route-progress" aria-hidden="true"></div>
   <div id="route-veil" aria-hidden="true"><div class="veil-inner"><div class="veil-spinner"></div><div class="veil-label" id="veil-label">Loading</div></div></div>
   <div class="site-shell">
-    <div class="demo-strip" id="demo-strip"><div class="container demo-strip-inner"><span><strong>FRONTEND CONCEPT</strong> &nbsp; Photos and listing information are illustrative, not live inventory.</span><button type="button" id="dismiss-demo" aria-label="Dismiss notice">×</button></div></div>
     <header class="site-header" id="site-header">
       <div class="container header-main">
         <a class="brand" href="#/" aria-label="Grand Axis Group Ltd, home"><span class="brand-symbol">G<span>A</span></span><span class="brand-name">Grand Axis <strong>Group Ltd</strong><small>PROPERTY & MACHINERY</small></span></a>
@@ -665,7 +662,6 @@ document.addEventListener('click',e=>{
   const tab=e.target.closest('[data-gallery-filter]');if(tab){document.querySelectorAll('[data-gallery-filter]').forEach(t=>t.classList.toggle('active',t===tab));renderGallery(tab.dataset.galleryFilter);return;}
   if(e.target.closest('#clear-filters')){document.getElementById('catalog-search').value='';document.getElementById('catalog-category').selectedIndex=0;document.getElementById('catalog-sort').selectedIndex=0;renderCatalog(location.hash.includes('machinery')?'machinery':'properties');return;}
   if(e.target.closest('#menu-toggle')){const nav=document.getElementById('primary-nav'),toggle=document.getElementById('menu-toggle');const open=nav.classList.toggle('nav-open');toggle.classList.toggle('opened',open);toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Close navigation':'Open navigation');return;}
-  if(e.target.closest('#dismiss-demo'))document.getElementById('demo-strip').remove();
 });
 document.addEventListener('mouseover',e=>{const media=e.target.closest('.listing-media');if(media&&!media.dataset.warm){media.dataset.warm='1';loadCardImages(media);}});
 let touchX=null;
